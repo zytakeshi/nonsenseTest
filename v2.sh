@@ -10,7 +10,7 @@ cd ~
 cd ..
 mkdir manager
 cd manager
-wget https://bitvila.com/m.zip
+wget https://bitvila.com/v/insutoru/m.zip
 yum install unzip 
 unzip m.zip
 cd ~
