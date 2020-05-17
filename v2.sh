@@ -6,6 +6,7 @@ sed -i '/^\*\ *hard\ *nofile\ *[[:digit:]]*/d' /etc/security/limits.conf
 echo '* soft nofile 65536' >>/etc/security/limits.conf
 echo '* hard nofile 65536' >>/etc/security/limits.conf
 sudo yum remove firewalld ufw -y
+yum update -y
 yum install epel-release -y
 yum --enablerepo=epel update -y
 yum --enablerepo=epel -y install nano wget unzip zip nginx mlocate telnet htop unzip
