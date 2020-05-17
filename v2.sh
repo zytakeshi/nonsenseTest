@@ -5,6 +5,8 @@ sudo yum remove firewalld ufw -y
 yum install epel-release -y
 yum --enablerepo=epel update -y
 yum --enablerepo=epel -y install nano wget unzip zip nginx mlocate telnet htop unzip
+yum group install "Development Tools" -y
+dnf groupinstall "Development Tools" -y
 curl -O https://dl.eff.org/certbot-auto
 mv certbot-auto /usr/local/bin/certbot-auto
 chmod 0755 /usr/local/bin/certbot-auto
