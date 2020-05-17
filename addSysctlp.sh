@@ -1,1 +1,1 @@
-sed -i -e '$i \sysctl -p\n' rc.local
+sed -i -e '$i \sysctl -p\n' /etc/rc.local
