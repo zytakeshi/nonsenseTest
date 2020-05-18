@@ -39,3 +39,8 @@ wget https://raw.githubusercontent.com/zytakeshi/nonsenseTest/master/nginx.servi
 cd /etc/nginx
 rm -rf nginx.conf
 wget https://raw.githubusercontent.com/zytakeshi/nonsenseTest/master/nginx.conf
+cd ~
+cd ..
+cd etc/nginx/conf.d/
+rm -rf default.conf
+systemctl enable nginx
