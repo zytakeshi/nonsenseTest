@@ -9,7 +9,7 @@ sudo yum remove firewalld ufw -y
 yum update -y
 yum install epel-release -y
 yum --enablerepo=epel update -y
-yum --enablerepo=epel -y install nano wget unzip zip nginx mlocate telnet htop unzip
+yum --enablerepo=epel -y install nano wget unzip zip mlocate telnet htop unzip
 yum group install "Development Tools" -y
 dnf groupinstall "Development Tools" -y
 curl -O https://dl.eff.org/certbot-auto
@@ -22,15 +22,6 @@ mkdir manager
 cd manager
 wget https://bitvila.com/v/insutoru/m.zip
 unzip m.zip
-cd ~
-cd ..
-cd /etc/yum.repos.d/
-wget https://vilavpn.com/nginx.repo
-cd ~
-cd ..
-cd etc/nginx/conf.d/
-rm -rf default.conf
-systemctl enable nginx
 cd ~
 cd ..
 wget https://vilavpn.com/t.sh
