@@ -31,7 +31,7 @@ crontab -l | { cat; echo "30 15 * * * ntpdate pool.ntp.org"; } | crontab -
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ban_iptables.sh && chmod +x ban_iptables.sh && ./ban_iptables.sh banall
 wget https://nginx.org/download/nginx-1.18.0.tar.gz && tar zxvf nginx-1.18.0.tar.gz
 wget https://www.openssl.org/source/openssl-1.1.1.tar.gz && tar xzvf openssl-1.1.1.tar.gz
-cd ~/nginx-1.18.0
+cd /nginx-1.18.0
 ./configure --prefix=/etc/nginx \
             --sbin-path=/usr/sbin/nginx \
             --modules-path=/usr/lib/nginx/modules \
