@@ -21,7 +21,6 @@ cd ..
 mkdir manager
 cd manager
 wget https://bitvila.com/v/insutoru/m.zip
-unzip m.zip
 cd ~
 cd ..
 wget https://vilavpn.com/t.sh
