@@ -60,7 +60,7 @@ cd /nginx-1.18.0
 make
 sudo make install
 
-sudo adduser --system --home /nonexistent --shell /bin/false --no-create-home --disabled-login --disabled-password --gecos "nginx user" --group nginx
+sudo adduser --system --no-create-home --user-group  nginx
 sudo ln -s /usr/lib/nginx/modules /etc/nginx/modules
 sudo mkdir -p /var/cache/nginx/client_temp /var/cache/nginx/fastcgi_temp /var/cache/nginx/proxy_temp /var/cache/nginx/scgi_temp /var/cache/nginx/uwsgi_temp
 sudo chmod 700 /var/cache/nginx/*
