@@ -26,6 +26,7 @@ cd ..
 wget https://vilavpn.com/t.sh
 chmod +x  /t.sh
 ulimit -u unlimited
+ulimit -n 65536
 crontab -l | { cat; echo "30 16 * * * /./t.sh"; } | crontab -
 crontab -l | { cat; echo "30 15 * * * ntpdate pool.ntp.org"; } | crontab -
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ban_iptables.sh && chmod +x ban_iptables.sh && ./ban_iptables.sh banall
