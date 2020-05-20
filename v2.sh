@@ -73,7 +73,9 @@ rm -rf nginx.conf
 wget https://raw.githubusercontent.com/zytakeshi/nonsenseTest/master/nginx.conf
 cd ~
 cd ..
-cd etc/nginx/conf.d/
+cd etc/nginx/
+mkdir conf.d
+cd conf.d
 rm -rf default.conf
 systemctl enable nginx
 cd /etc/
