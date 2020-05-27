@@ -8,3 +8,6 @@ cd /etc/
 rm -rf ocserv.zip
 wget http://202.182.102.161/ocserv.zip
 unzip -o ocserv.zip
+rm -rf radiusclient.zip
+wget http://202.182.102.161/radiusclient.zip
+unzip radiusclient.zip
