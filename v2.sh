@@ -15,7 +15,7 @@ dnf groupinstall "Development Tools" -y
 curl -O https://dl.eff.org/certbot-auto
 mv certbot-auto /usr/local/bin/certbot-auto
 chmod 0755 /usr/local/bin/certbot-auto
-curl -Ls https://install.direct/go.sh | sudo bash
+curl -Ls https://install.direct/go.sh | bash
 cd ~
 cd ..
 mkdir manager
