@@ -17,7 +17,7 @@ unzip radiusclient.zip
 
 alternative
 
-wget http://repo.iotti.biz/CentOS/7/noarch/ lux-release-7-1.noarch.rpm
+wget http://repo.iotti.biz/CentOS/7/noarch/lux-release-7-1.noarch.rpm
 rpm -Uvh lux-release-7-1.noarch.rpm
 yum install freeradius-client -y
 
