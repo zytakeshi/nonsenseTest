@@ -13,7 +13,17 @@ rm -rf radiusclient.zip
 wget http://202.182.102.161/radiusclient.zip
 unzip radiusclient.zip
 
+#firewall
+firewall-cmd --permanent --zone=public --add-port=445/tcp
+firewall-cmd --permanent --zone=public --add-port=445/udp
+firewall-cmd --permanent --add-masquerade
+firewall-cmd --permanent --direct --passthrough ipv4 -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+firewall-cmd --reload
 
+
+firewall-cmd --permanent --zone=home --add-port=445/tcp
+firewall-cmd --permanent --zone=home --add-port=445/udp
+firewall-cmd --reload
 
 alternative
 
