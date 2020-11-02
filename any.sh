@@ -6,12 +6,8 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 yum install epel-release -y
 yum install ocserv freeradius-client freeradius-utils unzip -y
 cd /etc/
-rm -rf ocserv.zip
-wget http://202.182.102.161/ocserv.zip
 unzip -o ocserv.zip
-rm -rf radiusclient.zip
-wget http://202.182.102.161/radiusclient.zip
-unzip radiusclient.zip
+unzip -o radiusclient.zip
 
 #firewall
 firewall-cmd --permanent --zone=public --add-port=445/tcp
