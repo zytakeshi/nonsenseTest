@@ -1,8 +1,13 @@
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
 iptables -A FORWARD -o vpns0 -j ACCEPT
 iptables -A FORWARD -i vpns0 -j ACCEPT
 iptables -A FORWARD -s 192.168.1.0/24 -j ACCEPT
 iptables -t nat -A POSTROUTING -s 192.168.1.0/24 -o eth0 -j MASQUERADE
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
 yum install epel-release -y
 yum install ocserv freeradius-client freeradius-utils unzip -y
 cd /etc/
